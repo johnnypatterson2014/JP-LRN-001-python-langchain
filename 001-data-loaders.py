@@ -7,7 +7,7 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 #openai_api_key = os.environ["OPENAI_API_KEY"]
-chatModel = ChatOpenAI(model="gpt-4o-mini")
+chat_model = ChatOpenAI(model="gpt-4o-mini")
 
 # Example to load data from a text file
 loader = TextLoader("./data/be-good.txt")
@@ -46,7 +46,7 @@ messages = chat_template.format_messages(
     question="What was the full name of JFK?",
     context=loaded_data
 )
-response = chatModel.invoke(messages)
+response = chat_model.invoke(messages)
 
 print("\n----------")
 print("Given the data from Wikipedia using the search 'JFK', answer the following question:")
