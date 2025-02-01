@@ -1,85 +1,44 @@
 import os
-from dotenv import load_dotenv, find_dotenv
-_ = load_dotenv(find_dotenv())
-openai_api_key = os.environ["OPENAI_API_KEY"]
-
 from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_community.document_loaders import TextLoader, CSVLoader, UnstructuredHTMLLoader, PyPDFLoader, WikipediaLoader
+from dotenv import load_dotenv, find_dotenv
 
-chatModel = ChatOpenAI(model="gpt-3.5-turbo-0125")
+_ = load_dotenv(find_dotenv())
 
-from langchain_community.document_loaders import TextLoader
+#openai_api_key = os.environ["OPENAI_API_KEY"]
+chatModel = ChatOpenAI(model="gpt-4o-mini")
 
+# Example to load data from a text file
 loader = TextLoader("./data/be-good.txt")
-
 loaded_data = loader.load()
-
-print("\n----------\n")
-
-print("Loaded TXT file:")
-
-print("\n----------\n")
 #print(loaded_data)
 
-print("\n----------\n")
-
-from langchain_community.document_loaders import CSVLoader
-
+# Example to load data from a csv file
 loader = CSVLoader('./data/Street_Tree_List.csv')
-
 loaded_data = loader.load()
-
-print("\n----------\n")
-
-print("Loaded CSV file:")
-
-print("\n----------\n")
 #print(loaded_data)
 
-print("\n----------\n")
-
-from langchain_community.document_loaders import UnstructuredHTMLLoader
-
+# Example to load data from a local html file
 loader = UnstructuredHTMLLoader('./data/100-startups.html')
-
 loaded_data = loader.load()
-
-print("\n----------\n")
-
-print("Loaded HTML page:")
-
-print("\n----------\n")
 #print(loaded_data)
 
-print("\n----------\n")
-
-from langchain_community.document_loaders import PyPDFLoader
-
+# Example to load data from a pdf file
 loader = PyPDFLoader('./data/5pages.pdf')
-
 loaded_data = loader.load_and_split()
-
-print("\n----------\n")
-
-print("Loaded HTML page:")
-
-print("\n----------\n")
 #print(loaded_data[0].page_content)
 
-print("\n----------\n")
-
-from langchain_community.document_loaders import WikipediaLoader
-
+# Example to load data from a Wikipedia page
 name = "JFK"
-
 loader = WikipediaLoader(query=name, load_max_docs=1)
-
 loaded_data = loader.load()[0].page_content
 
-from langchain_core.prompts import ChatPromptTemplate
-
+# Example to ask the LLM a question about the loaded data
+# Note that the entire text in loaded_data is passed to the LLM in the context window.
 chat_template = ChatPromptTemplate.from_messages(
     [
-        ("human", "Answer this {question}, here is some extra {context}"),
+        ("human", "Answer this question: {question}. Here is some extra context: {context}"),
     ]
 )
 
@@ -87,14 +46,10 @@ messages = chat_template.format_messages(
     question="What was the full name of JFK?",
     context=loaded_data
 )
-
 response = chatModel.invoke(messages)
 
-print("\n----------\n")
-
-print("Respond from Wikipedia: What was the full name of JFK?")
-
-print("\n----------\n")
-#print(response.content)
-
-print("\n----------\n")
+print("\n----------")
+print("Given the data from Wikipedia using the search 'JFK', answer the following question:")
+print("Question: What was the full name of JFK?")
+print("Answer from LLM: " + response.content)
+print("----------\n")
