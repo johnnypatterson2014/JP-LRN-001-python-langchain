@@ -52,9 +52,18 @@ Example Chatbot with history but limits the size of the history passed to the co
  - The memory of a chatbot is included in the context window of the LLM so, if left unmanaged, can potentially overflow it.
  - We are now going to learn how to limit the size of the memory of a chatbot
 
+## Python script: 004-key-data-extraction.py
+We will create an app to extract structured information from unstructured text. 
+Imagine, for example, that you want to extract the name, the lastname and the country of 
+the users that submit comments in the website of your company.
 
-
-
-
-
-
+## Python script: 005-sentiment-analysis.py
+* Sentiment Analysis is a very popular functionality. For example, be able to determine if a product review is positive or negative.
+* Our app will be able to do more than that. It will be a text classification app, also called a "tagging" app.
+* In short, we will create an app to classify text into labels. And these labels can be:
+    * Sentiment: Sentiment Analysis app.
+    * Language: Language Analysis app.
+    * Style (formal, informal, etc): Style Analysis app.
+    * Topics or categories: Topic or category Analysis app.
+    * Political tendency: Political Analysis app.
+    * Etc.
