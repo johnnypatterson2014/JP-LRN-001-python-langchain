@@ -106,3 +106,25 @@ LangServe is the python equivalent to springboot or node (for javascript):
  - you can quickly launch an http server to test your LangChain app
  - it creates a simple UI and rest API which will call your LangChain app
  - can be deployed to any server that has python installed
+
+## Python script: 011-streamlit-evaluate-app.py
+Streamlit is a python library that allows you to quickly create an html page and test it by starting up an http server.
+We will use streamlit to create a web page that calls our LangChain app.
+
+From your terminal:
+streamlit run 011-streamlit-evaluate-app.py
+
+You can now view the web app at:
+http://localhost:8501/
+
+
+LangChain evaluation Chain: the code in this script does the following:
+ - upload a text file
+ - text splitting, embedding and store in a vector db
+ - create a retriever chain (RetrievalQA) which will ask the LLM questions about the uploaded text file
+ - create an eval chain (QAEvalChain) which will take input:
+     - a known answer to the question
+     - the answer from the LLM retriever chain
+   and will use an LLM to evaluate if the two answers are the same or not (semantically the same, doesn't have to be an exact text match)
+
+
