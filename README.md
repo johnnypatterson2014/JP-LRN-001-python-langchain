@@ -71,8 +71,15 @@ the users that submit comments in the website of your company.
 ## Python script: 006-qa-from-sql.py
 SQL integration
   * We will create a Q&A app over tabular data in databases.
-  * These app will allow us to **ask a question about the data in a database in natural language and get back an answer also in natural language**.
+  * These app will allow us to ask a question about the data in a database in natural language and get back an answer also in natural language.
   * Building Q&A systems of SQL databases requires executing model-generated SQL queries. There are inherent risks in doing this. In production, make sure that your database connection permissions are always scoped as narrowly as possible for your chain's needs.
+
+## Python script: 007-qa-from-pdf.py
+* We will create a Q&A app that can answer questions about PDF files.
+* We will use a Document Loader to load text in a format usable by an LLM, then build a retrieval-augmented generation (RAG) pipeline to answer questions, including citations from the source material.
+* **We will use a basic approach for this project. You will see more advanced ways to solve the same problem in next projects**.
+
+
 
 
 

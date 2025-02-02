@@ -1,0 +1,20 @@
+----------
+
+What is this article about?
+
+----------
+
+The essay by Paul Graham discusses the importance of creating something that people want, focusing on building a great product rather than worrying about the business model initially. Graham also explores the idea that when you create something people want and not worry too much about making money, it resembles a charity. He uses examples like Google and Craigslist to illustrate his points about successful startups and the value of helping users.
+
+----------
+
+
+----------
+
+Show metadata:
+
+----------
+
+{'page': 0, 'source': './data/Be_Good.pdf'}
+
+----------
