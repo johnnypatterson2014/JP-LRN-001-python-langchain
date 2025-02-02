@@ -1,0 +1,5 @@
+----------
+Given the data from Wikipedia using the search 'JFK', answer the following question:
+Question: What was the full name of JFK?
+Answer from LLM: The full name of JFK was John Fitzgerald Kennedy.
+----------

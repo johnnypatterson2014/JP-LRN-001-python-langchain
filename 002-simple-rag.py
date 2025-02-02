@@ -14,7 +14,7 @@ _ = load_dotenv(find_dotenv())
 def convert_vector_docs_to_string(docs):
     return "\n\n".join([d.page_content for d in docs])
 
-chat_model = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatOpenAI(model="gpt-4o-mini")
 
 # Load a document that you want to ask the LLM about
 loaded_document = TextLoader('./data/state_of_the_union.txt').load()
@@ -88,7 +88,7 @@ messages = chat_template.format_messages(
     question=user_question,
     context=vector_db_context
 )
-response = chat_model.invoke(messages)
+response = llm.invoke(messages)
 
 print("\n----------")
 print("Given the data in the vector db, answer the following question (non-LCEL):")
@@ -129,7 +129,7 @@ prompt = ChatPromptTemplate.from_template(prompt_template)
 chain = (
     {"context": retriever | convert_vector_docs_to_string, "question": RunnablePassthrough()}
     | prompt
-    | chat_model
+    | llm
     | StrOutputParser()
 )
 

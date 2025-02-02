@@ -2,12 +2,19 @@ import os
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.document_loaders import TextLoader, CSVLoader, UnstructuredHTMLLoader, PyPDFLoader, WikipediaLoader
+from langchain_community.utilities import SQLDatabase
+from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
+from langchain.chains import create_sql_query_chain
+from operator import itemgetter
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import PromptTemplate
+from langchain_core.runnables import RunnablePassthrough
 from dotenv import load_dotenv, find_dotenv
 
 _ = load_dotenv(find_dotenv())
 
 #openai_api_key = os.environ["OPENAI_API_KEY"]
-chat_model = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatOpenAI(model="gpt-4o-mini")
 
 # Example to load data from a text file
 loader = TextLoader("./data/be-good.txt")
@@ -46,10 +53,11 @@ messages = chat_template.format_messages(
     question="What was the full name of JFK?",
     context=loaded_data
 )
-response = chat_model.invoke(messages)
+response = llm.invoke(messages)
 
 print("\n----------")
 print("Given the data from Wikipedia using the search 'JFK', answer the following question:")
 print("Question: What was the full name of JFK?")
 print("Answer from LLM: " + response.content)
 print("----------\n")
+

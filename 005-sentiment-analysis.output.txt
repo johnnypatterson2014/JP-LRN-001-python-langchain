@@ -1,0 +1,42 @@
+----------
+
+Sentiment analysis Trump follower:
+
+----------
+
+sentiment='positive' political_tendency='pro-Trump' language='English'
+
+----------
+
+
+----------
+
+Sentiment analysis Biden follower:
+
+----------
+
+sentiment='positive' political_tendency='supportive' language='English'
+
+----------
+
+
+----------
+
+Sentiment analysis Trump follower (with a list of options using enums):
+
+----------
+
+sentiment='happy' political_tendency='conservative' language='english'
+
+----------
+
+
+----------
+
+Sentiment analysis Biden follower (with a list of options using enums):
+
+----------
+
+sentiment='happy' political_tendency='liberal' language='english'
+
+----------

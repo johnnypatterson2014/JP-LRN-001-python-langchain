@@ -1,0 +1,14 @@
+----------
+Given the data in the vector db, answer the following question (non-LCEL):
+Question: What did the president say about the John Lewis Voting Rights Act?
+Answer from LLM: 
+content='The president called on the Senate to pass the John Lewis Voting Rights Act, emphasizing its importance in promoting voting rights.' 
+response_metadata={'token_usage': {'completion_tokens': 24, 'prompt_tokens': 767, 'total_tokens': 791, 'prompt_tokens_details': {'cached_tokens': 0, 'audio_tokens': 0}, 'completion_tokens_details': {'reasoning_tokens': 0, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_72ed7ab54c', 'finish_reason': 'stop', 'logprobs': None} id='run-653f2bbe-3ef5-4de6-b591-3a5f72ba36a8-0' usage_metadata={'input_tokens': 767, 'output_tokens': 24, 'total_tokens': 791}
+----------
+
+----------
+Given the data in the vector db, answer the following question (using LCEL):
+Question: What did the president say about the John Lewis Voting Rights Act?
+Answer from LLM: 
+The president called on the Senate to pass the John Lewis Voting Rights Act as part of his appeals for voting rights legislation.
+----------

@@ -8,7 +8,7 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
-chat_model = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatOpenAI(model="gpt-4o-mini")
 warnings.simplefilter("ignore", category=LangChainDeprecationWarning)
 
 # ----------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-chain = prompt | chat_model.with_structured_output(schema=Person)
+chain = prompt | llm.with_structured_output(schema=Person)
 comment = "I absolutely love this product! It's been a game-changer for my daily routine. The quality is top-notch and the customer service is outstanding. I've recommended it to all my friends and family. - Sarah Johnson, USA"
 response = chain.invoke({"text": comment})
 
@@ -68,7 +68,7 @@ class Data(BaseModel):
     # Creates a model so that we can extract multiple entities.
     people: List[Person]
     
-chain = prompt | chat_model.with_structured_output(schema=Data)
+chain = prompt | llm.with_structured_output(schema=Data)
 comment = "I'm so impressed with this product! It has truly transformed how I approach my daily tasks. The quality exceeds my expectations, and the customer support is truly exceptional. I've already suggested it to all my colleagues and relatives. - Emily Clarke, Canada"
 response = chain.invoke({"text": comment})
 

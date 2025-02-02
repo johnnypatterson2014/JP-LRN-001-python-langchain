@@ -1,0 +1,9 @@
+Key data extraction:
+name='Sarah' lastname='Johnson' country='USA'
+----------
+Key data extraction of a list of entities:
+people=[Person(name='Emily', lastname='Clarke', country='Canada')]
+----------
+Key data extraction of a review with several users:
+people=[Person(name='Alice', lastname='Johnson', country='Canada'), Person(name='Bob', lastname='Smith', country='USA')]
+----------

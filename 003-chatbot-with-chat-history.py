@@ -17,7 +17,7 @@ from langchain_core.runnables import RunnablePassthrough
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
-chat_model = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatOpenAI(model="gpt-4o-mini")
 warnings.simplefilter("ignore", category=LangChainDeprecationWarning)
 
 
@@ -45,7 +45,7 @@ prompt_template = ChatPromptTemplate(
 
 # This is a legacy LangChain chain (not the LCEL version)
 chain = LLMChain(
-    llm=chat_model,
+    llm=llm,
     prompt=prompt_template,
     memory=chat_history_file
 )
@@ -83,7 +83,7 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
     return chatbotMemory[session_id]
 
 chatbot_with_message_history = RunnableWithMessageHistory(
-    chat_model, 
+    llm, 
     get_session_history
 )
 
@@ -142,7 +142,7 @@ prompt = ChatPromptTemplate.from_messages(
 limitedMemoryChain = (
     RunnablePassthrough.assign(messages=lambda x: limited_memory_of_messages(x["messages"]))
     | prompt 
-    | chat_model
+    | llm
 )
 
 # the lambda function is used to create a small anonymous function in Python. The lambda function defined here takes one argument, `x`.

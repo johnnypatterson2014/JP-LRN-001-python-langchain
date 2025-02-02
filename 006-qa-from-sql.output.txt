@@ -1,0 +1,159 @@
+PS L:\_github\_JP_github\JP-LRN-001-python-langchain> & l:/_github/_JP_github/JP-LRN-001-python-langchain/.venv/Scripts/python.exe l:/_github/_JP_github/JP-LRN-001-python-langchain/006-qa-from-sql.py
+
+SQL query for question: List the species of trees that are present in San Francisco
+
+SELECT DISTINCT "qSpecies"
+FROM street_trees
+
+----------
+Response for question (with query execution included): List the species of trees that are present in San Francisco
+[("Arbutus 'Marina' :: Hybrid Strawberry Tree",), ('Afrocarpus gracilior :: Fern Pine',), ("Thuja occidentalis 'Emerald' :: Emerald Arborvitae",), ("Magnolia grandiflora 'Little Gem' :: Little Gem Magnolia",), ('Platanus x hispanica :: Sycamore: London Plane',), ('Ulmus parvifolia :: Chinese Elm',), ('Leptospermum laevigatum :: Australian Tea Tree',), ("Olea europaea 'Fruitless' :: Fruitless Olive",), ('Ficus rubiginosa :: Port Jackson Fig',), ('Cycas revoluta :: Sago palm',), ('Lophostemon confertus :: Brisbane Box',), ('Podocarpus gracilor :: Fern Pine',), ('Eriobotrya deflexa :: Bronze Loquat',), ('Ligustrum lucidum :: Glossy Privet',), ('Syagrus romanzoffianum :: Queen Palm',), ("Ficus microcarpa nitida 'Green Gem' :: Indian Laurel Fig Tree 'Green Gem'",), ('Prunus cerasifera :: Cherry Plum',), (':: To Be Determine',), ('Myoporum laetum :: Myoporum',), ('Tristaniopsis laurina :: Swamp Myrtle',), ('Ginkgo biloba :: Maidenhair Tree',), ('Pyrus calleryana :: Ornamental Pear',), ("Morus alba 'Fruitless' :: Fruitless Mulberry",), ('Magnolia grandiflora :: Southern Magnolia',), ('Pittosporum undulatum :: Victorian Box',), ('Lyonothamnus floribundus subsp. asplenifolius :: Santa Cruz Ironwood',), ('Leptospermum scoparium :: New Zealand Tea Tree',), ('Tree(s) ::',), ('Acer rubrum :: Red Maple',), (':: Tree',), ('Carpinus betulus :: European Hornbeam',), ('Ilex aquifolium :: European Holly',), ('Lagunaria patersonii :: Primrose Tree',), ('Pinus radiata :: Monterey Pine',), ('Prunus laurocerasus :: English laurel',), ('Cercis occidentalis :: Western Redbud',), ('Prunus serrulata :: Ornamental Cherry',), ('Maytenus boaria :: Mayten',), ('Arbutus unedo :: Strawberry Tree',), ('Callistemon citrinus :: Lemon Bottlebrush',), ('Cordyline australis :: Dracena Palm',), ('Quercus suber :: Cork Oak',), ('Pseudotsuga menziesii :: Douglas Fir',), ('Quercus agrifolia :: Coast Live Oak',), ('Olea Majestic Beauty ::',), ('Platanus racemosa :: California Sycamore',), ('Metrosideros excelsa :: New Zealand Xmas Tree',), ('Quercus tomentella :: Island oak',), ('Olea europaea :: Olive Tree',), ('Quercus spp :: Oak',), ('Platanus occidentalis :: American sycamore',), ('Hakea suaveolens :: Sweet Hakea Tree',), ('Acacia melanoxylon :: Blackwood Acacia',), ('Potential Site :: Potential Site',), ('Ligustrum japonicum :: Japanese Privet',), ('Liquidambar styraciflua :: American Sweet Gum',), ("Prunus subhirtella 'autumnalis' :: Higan Cherry",), ('Acer palmatum :: Japanese Maple',), ('Juniperus chinensis :: Juniper',), ('Ficus retusa nitida :: Banyan Fig',), ('Acacia decurrens :: Acacia: Silver Wattle',), ('Cupressus macrocarpa :: Monterey Cypress',), ('Archontophoenix cunninghamiana :: King Palm',), ('Rhamnus alaternus :: Italian Buckthorn',), ('Schinus molle :: California Pepper',), ('Crataegus phaenopyrum :: Washington Hawthorn',), ('Elaeocarpus decipiens :: Japanese Blueberry Tree',), ('Aesculus x carnea :: Red Horse Chestnut',), ("Platanus x hispanica 'Columbia' :: Columbia Hybrid Plane Tree",), ('Eucalyptus camaldulensis :: River Red Gum',), ('Pinus pinea :: Italian Stone Pine',), ('Eucalyptus citriodora :: Lemon scented eucalyptus',), ('Schinus terebinthifolius :: Brazilian Pepper',), ("Magnolia grandiflora 'Saint Mary' :: Saint Mary Magnolia",), ('Magnolia spp :: Magnolia',), ('Phoenix dactylifera :: Date Palm',), ('Pyrus kawakamii :: Evergreen Pear',), ('Corymbia ficifolia :: Red Flowering Gum',), ('Acacia stenophylla :: Shoestring Acacia',), ('Eriobotrya japonica :: Edible Loquat',), ('Hymenosporum flavum :: Sweetshade',), ("Olea europaea 'Wilsonii' :: Wilson Olive Semi-fruitless",), ('::',), ('Tilia cordata :: Littleleaf Linden',), ('Eucalyptus polyanthemos :: Silver Dollar Eucalyptus',), ('Melaleuca quinquenervia :: Cajeput',), ('Agonis flexuosa :: Peppermint Willow',), ('Koelreuteria paniculata :: Golden Rain Tree',), ('Yucca elephantipes :: Giant Yucca',), ("Populus nigra 'Italica' :: Lombardy Poplar",), ('Eucalyptus globulus :: Blue Gum',), ('Ficus microcarpa :: Chinese Banyan',), ("Acacia baileyana 'Purpurea' :: Purple-leaf Acacia",), ('Acer buergeranum :: Trident Maple',), ('Cinnamomum camphora :: Camphor Tree',), ('Howea belmoreana :: Belmore Sentry Palm',), ('Pinus canariensis :: Canary Island Pine',), ("Ceanothus 'Ray Hartman' :: California Lilac 'Ray Hartman'",), ('Butia catarinensis :: Butia',), ('Acacia spp :: Acacia Spp',), ('Jacaranda mimosifolia :: Jacaranda',), ("Eucalyptus nicholii :: Nichol's Willow-Leafed Peppermint",), ('Prunus spp :: Flowering Plum',), ("Acer rubrum 'October Glory' :: Red October Glory Maple",), ('Umbellularia californica :: California Bay',), ('Melaleuca ericifolia :: Heath Melaleuca',), ('Prunus caroliniana :: Carolina Cherry Laurel',), ('Callistemon viminalis :: Weeping Bottlebrush',), ('Tristania conferta ::',), ('Magnolia champaca :: Champa',), ("Acer rubrum 'Armstrong' :: Armstrong Red Maple",), ("Pyrus calleryana 'Bradford' :: Ornamental Pear: Bradford",), ('Ulmus spp :: Elm Spp',), ('Photinia fraseri :: Photinia: Chinese photinia',), ("Tristaniopsis laurina 'Elegant' :: Small-leaf Tristania 'Elegant'",), ('Quercus virginiana :: Southern Live Oak',), ('Laurus nobilis :: Sweet Bay: Grecian Laurel',), ('Griselinia lucida :: Griselinia',), ("Dodonaea viscosa 'Purpurea' :: Purple Hopseed Bush",), ('Sequoia sempervirens :: Coast Redwood',), ("Ginkgo biloba 'Autumn Gold' :: Ginkgo: Autumn Gold",), ("Ulmus carpinifolia 'Frontier' :: Frontier Elm 'Frontier'",), ('Geijera parviflora :: Australian Willow',), ("Laurus x 'Saratoga' :: Hybrid Laurel",), ('Melaleuca styphelliodes :: Paperbark Tree',), ("Prunus serrulata 'Kwanzan' :: Kwanzan Flowering Cherry",), ('Acer japonicum :: Japanese Maple',), ('Araucaria heterophylla :: Norfolk Island Pine',), ('Washingtonia robusta :: Mexican Fan Palm',), ('Lagerstroemia indica :: Crape Myrtle',), ('Magnolia doltsopa :: Himalayan Magnolia',), ('Syzygium paniculatum :: Brush Cherry',), ('Pinus thunbergii :: Japanese Black Pine',), ('Cercis canadensis :: Eastern Redbud',), ('Eucalyptus Spp :: Eucalyptus',), ('Persea americana :: Avocado',), ('Pistacia chinensis :: Chinese Pistache',), ("Maytenus boaria 'Green Showers' :: Meyten Tree 'Green Showers'",), ("Magnolia grandiflora 'Russet' :: Russet Magnolia",), ('Prunus lyonii :: Catalina Cherry',), ("Aesculus x carnea 'Briotii' :: Ruby Horse Chestnut",), ("Magnolia grandiflora 'Majestic Beauty' :: Majestic Beauty Magnolia",), ('Prunus spp :: Almond Tree',), ('Nerium oleander :: Oleander',), ("Acacia baileyana :: Bailey's Acacia",), ('Grevillea robusta :: Silk Oak Tree',), ('Zelkova serrata :: Sawleaf Zelkova',), ('Fraxinus uhdei :: Shamel Ash: Evergreen Ash',)]
+
+----------
+Response for question (passing question and result to the LLM): List the species of trees that are present in San Francisco
+
+The species of trees present in San Francisco are as follows:
+- Arbutus 'Marina' :: Hybrid Strawberry Tree
+- Afrocarpus gracilior :: Fern Pine
+- Thuja occidentalis 'Emerald' :: Emerald Arborvitae
+- Magnolia grandiflora 'Little Gem' :: Little Gem Magnolia
+- Platanus x hispanica :: Sycamore: London Plane
+- Ulmus parvifolia :: Chinese Elm
+- Leptospermum laevigatum :: Australian Tea Tree
+- Olea europaea 'Fruitless' :: Fruitless Olive
+- Ficus rubiginosa :: Port Jackson Fig
+- Cycas revoluta :: Sago palm
+- Lophostemon confertus :: Brisbane Box
+- Podocarpus gracilor :: Fern Pine
+- Eriobotrya deflexa :: Bronze Loquat
+- Ligustrum lucidum :: Glossy Privet
+- Syagrus romanzoffianum :: Queen Palm
+- Ficus microcarpa nitida 'Green Gem' :: Indian Laurel Fig Tree 'Green Gem'
+- Prunus cerasifera :: Cherry Plum
+- Myoporum laetum :: Myoporum
+- Tristaniopsis laurina :: Swamp Myrtle
+- Ginkgo biloba :: Maidenhair Tree
+- Pyrus calleryana :: Ornamental Pear
+- Morus alba 'Fruitless' :: Fruitless Mulberry
+- Magnolia grandiflora :: Southern Magnolia
+- Pittosporum undulatum :: Victorian Box
+- Lyonothamnus floribundus subsp. asplenifolius :: Santa Cruz Ironwood
+- Leptospermum scoparium :: New Zealand Tea Tree
+- Acer rubrum :: Red Maple
+- Carpinus betulus :: European Hornbeam
+- Ilex aquifolium :: European Holly
+- Lagunaria patersonii :: Primrose Tree
+- Pinus radiata :: Monterey Pine
+- Prunus laurocerasus :: English laurel
+- Cercis occidentalis :: Western Redbud
+- Prunus serrulata :: Ornamental Cherry
+- Maytenus boaria :: Mayten
+- Arbutus unedo :: Strawberry Tree
+- Callistemon citrinus :: Lemon Bottlebrush
+- Cordyline australis :: Dracena Palm
+- Quercus suber :: Cork Oak
+- Pseudotsuga menziesii :: Douglas Fir
+- Quercus agrifolia :: Coast Live Oak
+- Olea Majestic Beauty ::
+- Platanus racemosa :: California Sycamore
+- Metrosideros excelsa :: New Zealand Xmas Tree
+- Quercus tomentella :: Island oak
+- Olea europaea :: Olive Tree
+- Quercus spp :: Oak
+- Platanus occidentalis :: American sycamore
+- Hakea suaveolens :: Sweet Hakea Tree
+- Acacia melanoxylon :: Blackwood Acacia
+- Ligustrum japonicum :: Japanese Privet
+- Liquidambar styraciflua :: American Sweet Gum
+- Prunus subhirtella 'autumnalis' :: Higan Cherry
+- Acer palmatum :: Japanese Maple
+- Juniperus chinensis :: Juniper
+- Ficus retusa nitida :: Banyan Fig
+- Acacia decurrens :: Acacia: Silver Wattle
+- Cupressus macrocarpa :: Monterey Cypress
+- Archontophoenix cunninghamiana :: King Palm
+- Rhamnus alaternus :: Italian Buckthorn
+- Schinus molle :: California Pepper
+- Crataegus phaenopyrum :: Washington Hawthorn
+- Elaeocarpus decipiens :: Japanese Blueberry Tree
+- Aesculus x carnea :: Red Horse Chestnut
+- Platanus x hispanica 'Columbia' :: Columbia Hybrid Plane Tree
+- Eucalyptus camaldulensis :: River Red Gum
+- Pinus pinea :: Italian Stone Pine
+- Eucalyptus citriodora :: Lemon scented eucalyptus
+- Schinus terebinthifolius :: Brazilian Pepper
+- Magnolia grandiflora 'Saint Mary' :: Saint Mary Magnolia
+- Magnolia spp :: Magnolia
+- Phoenix dactylifera :: Date Palm
+- Pyrus kawakamii :: Evergreen Pear
+- Corymbia ficifolia :: Red Flowering Gum
+- Acacia stenophylla :: Shoestring Acacia
+- Eriobotrya japonica :: Edible Loquat
+- Hymenosporum flavum :: Sweetshade
+- Olea europaea 'Wilsonii' :: Wilson Olive Semi-fruitless
+- Tilia cordata :: Littleleaf Linden
+- Eucalyptus polyanthemos :: Silver Dollar Eucalyptus
+- Melaleuca quinquenervia :: Cajeput
+- Agonis flexuosa :: Peppermint Willow
+- Koelreuteria paniculata :: Golden Rain Tree
+- Yucca elephantipes :: Giant Yucca
+- Populus nigra 'Italica' :: Lombardy Poplar
+- Eucalyptus globulus :: Blue Gum
+- Ficus microcarpa :: Chinese Banyan
+- Acacia baileyana 'Purpurea' :: Purple-leaf Acacia
+- Acer buergeranum :: Trident Maple
+- Cinnamomum camphora :: Camphor Tree
+- Howea belmoreana :: Belmore Sentry Palm
+- Pinus canariensis :: Canary Island Pine
+- Ceanothus 'Ray Hartman' :: California Lilac 'Ray Hartman'
+- Butia catarinensis :: Butia
+- Acacia spp :: Acacia Spp
+- Jacaranda mimosifolia :: Jacaranda
+- Eucalyptus nicholii :: Nichol's Willow-Leafed Peppermint
+- Acer rubrum 'October Glory' :: Red October Glory Maple
+- Umbellularia californica :: California Bay
+- Melaleuca ericifolia :: Heath Melaleuca
+- Prunus caroliniana :: Carolina Cherry Laurel
+- Callistemon viminalis :: Weeping Bottlebrush
+- Tristania conferta ::
+- Magnolia champaca :: Champa
+- Acer rubrum 'Armstrong' :: Armstrong Red Maple
+- Pyrus calleryana 'Bradford' :: Ornamental Pear: Bradford
+- Ulmus spp :: Elm Spp
+- Photinia fraseri :: Photinia: Chinese photinia
+- Tristaniopsis laurina 'Elegant' :: Small-leaf Tristania 'Elegant'
+- Quercus virginiana :: Southern Live Oak
+- Laurus nobilis :: Sweet Bay: Grecian Laurel
+- Griselinia lucida :: Griselinia
+- Dodonaea viscosa 'Purpurea' :: Purple Hopseed Bush
+- Sequoia sempervirens :: Coast Redwood
+- Ginkgo biloba 'Autumn Gold' :: Ginkgo: Autumn Gold
+- Ulmus carpinifolia 'Frontier' :: Frontier Elm 'Frontier'
+- Geijera parviflora :: Australian Willow
+- Laurus x 'Saratoga' :: Hybrid Laurel
+- Melaleuca styphelliodes :: Paperbark Tree
+- Prunus serrulata 'Kwanzan' :: Kwanzan Flowering Cherry
+- Acer japonicum :: Japanese Maple
+- Araucaria heterophylla :: Norfolk Island Pine
+- Washingtonia robusta :: Mexican Fan Palm
+- Lagerstroemia indica :: Crape Myrtle
+- Magnolia doltsopa :: Himalayan Magnolia
+- Syzygium paniculatum :: Brush Cherry
+- Pinus thunbergii :: Japanese Black Pine
+- Cercis canadensis :: Eastern Redbud
+- Eucalyptus Spp :: Eucalyptus
+- Persea americana :: Avocado
+- Pistacia chinensis :: Chinese Pistache
+- Maytenus boaria 'Green Showers' :: Meyten Tree 'Green Showers'
+- Magnolia grandiflora 'Russet' :: Russet Magnolia
+- Prunus lyonii :: Catalina Cherry
+- Aesculus x carnea 'Briotii' :: Ruby Horse Chestnut
+- Magnolia grandiflora 'Majestic Beauty' :: Majestic Beauty Magnolia
+- Prunus spp :: Almond Tree
+- Nerium oleander :: Oleander
+- Acacia baileyana :: Bailey's Acacia
+- Grevillea robusta :: Silk Oak Tree
+- Zelkova serrata :: Sawleaf Zelkova
+- Fraxinus uhdei :: Shamel Ash: Evergreen Ash
+
+PS L:\_github\_JP_github\JP-LRN-001-python-langchain> 
