@@ -101,7 +101,7 @@ The agent is given a set of tools to perform a decision or action.
 In this example, we give the agent a tool to query a search engine (called Tavily).
 We then use the agent to answer questions by using this tool (call the search engine for results and use this context to answer the question). 
 
-## Python script: 010-deploy-to-local-using-langserve-playground.py
+## Python script: 010-langserve-http-server.py
 LangServe is the python equivalent to springboot or node (for javascript):
  - you can quickly launch an http server to test your LangChain app
  - it creates a simple UI and rest API which will call your LangChain app
