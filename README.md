@@ -34,4 +34,27 @@ RAG process:
 - receive response from LLM
 - format the output of the LLM
 
+## Python script: 003-chatbot-with-chat-history.py
+Example chatbot that remembers the chat history. 
+- We will use the ChatMessageHistory package.
+- We will save the Chatbot memory in a python dictionary called chatbotMemory.
+- We will define the get_session_history function to create a session_id for each conversation.
+- We will use the built-in runnable RunnableWithMesageHistory.
+
+Chatbot with memory
+ - will remember previous chat history
+ - chat history is saved to a file
+ - note that the entire chat history is sent to the LLM context window.
+
+Example Chatbot that saves chat history by session_id
+
+Example Chatbot with history but limits the size of the history passed to the context window
+ - The memory of a chatbot is included in the context window of the LLM so, if left unmanaged, can potentially overflow it.
+ - We are now going to learn how to limit the size of the memory of a chatbot
+
+
+
+
+
+
 

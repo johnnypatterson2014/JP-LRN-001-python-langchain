@@ -101,6 +101,29 @@ print("----------\n")
 # Call LLM using LCEL 
 # --------------------------------------------------
 
+# Most used LCEL runnables:
+# - RunnablePassthrough - does not modify the input
+# - RunnableLambda - To use a custom function inside a LCEL chain we need to wrap it up with RunnableLambda
+# - RunnableParallel - This is probably the most important and most useful Runnable from LangChain
+#     - you define a list of operations and they will be executed in parallel
+#
+# eg. 
+# chain = RunnableParallel(
+#     {
+#         "operation_a": RunnablePassthrough(),
+#         "operation_b": RunnableLambda(some_custom_function_name),
+#         "operation_c": RunnablePassthrough(),
+#     }
+# ) | prompt | model | output_parser
+#
+# eg. 
+# chain = (
+#     RunnableParallel({"context": retriever, "question": RunnablePassthrough()})
+#     | prompt
+#     | model
+#     | StrOutputParser()
+# )
+
 prompt = ChatPromptTemplate.from_template(prompt_template)
 
 chain = (
