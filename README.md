@@ -79,7 +79,30 @@ SQL integration
 * We will use a Document Loader to load text in a format usable by an LLM, then build a retrieval-augmented generation (RAG) pipeline to answer questions, including citations from the source material.
 * **We will use a basic approach for this project. You will see more advanced ways to solve the same problem in next projects**.
 
+## Python script: 008-conversational-rag.py
+What we need to solve
+* Store the chat conversation.
+* When the user enters a new input, put that input in context.
+* Re-phrase the user input to have a contextualized input.
+* Send the contextualized input to the retriever.
+* Use the retriever to build a conversational rag chain.
+* Add extra features like persising memory (save memory in a file) and session memories.
 
+The process we will follow
+1. Create a basic RAG without memory.
+2. Create a ChatPrompTemplate able to contextualize inputs.
+3. Create a retriever aware of memory.
+4. Create a basic conversational RAG.
+5. Create an advanced conversational RAG with persistence and session memories.
 
+## Python script: 009-simple-agent.py
+Example of a LangChain Agent implementation (called LangGraph).
+The agent is given a set of tools to perform a decision or action.
+In this example, we give the agent a tool to query a search engine (called Tavily).
+We then use the agent to answer questions by using this tool (call the search engine for results and use this context to answer the question). 
 
-
+## Python script: 010-deploy-to-local-using-langserve-playground.py
+LangServe is the python equivalent to springboot or node (for javascript):
+ - you can quickly launch an http server to test your LangChain app
+ - it creates a simple UI and rest API which will call your LangChain app
+ - can be deployed to any server that has python installed

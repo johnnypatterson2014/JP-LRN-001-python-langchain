@@ -141,3 +141,19 @@ print("Question: " + user_question)
 print("Answer from LLM: ")
 print(response_lcel)
 print("----------\n")
+
+
+# --------------------------------------------------
+# LangChain templates
+# --------------------------------------------------
+# 
+# LangChain provides some pre-made prompt templates. Use import statement:
+# from langchain import hub
+#
+# the following line is not compatible with python 3.11.4
+# to install langchain-hub, you will have to use python 3.12.2 or superior
+#
+# prompt = hub.pull("rlm/rag-prompt")
+#
+# to keep using python 3.11.4, we will paste the prompt from the hub
+# prompt  = ChatPromptTemplate(input_variables=['context', 'question'], metadata={'lc_hub_owner': 'rlm', 'lc_hub_repo': 'rag-prompt', 'lc_hub_commit_hash': '50442af133e61576e74536c6556cefe1fac147cad032f4377b60c436e6cdcb6e'}, messages=[HumanMessagePromptTemplate(prompt=PromptTemplate(input_variables=['context', 'question'], template="You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\nQuestion: {question} \nContext: {context} \nAnswer:"))])
